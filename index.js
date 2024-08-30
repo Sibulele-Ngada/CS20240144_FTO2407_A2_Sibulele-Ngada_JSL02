@@ -21,18 +21,18 @@ const addNewGoal = () => {
      
     if (goalList.hasChildNodes()) {
     //Check for duplicates
-    for (let i = 0; i < goalList.childElementCount; i++) {
-        if (goalList.childNodes[i].textContent === goalInput){
-            exists = true;
-        } 
-    }
-    if (exists){
-        alert("⚠️Goal already exists!⚠️");
-    } else {
-        const newGoal = document.createElement('li');
-        newGoal.textContent = goalInput;
-        goalList.appendChild(newGoal);
-    }
+        for (let i = 0; i < goalList.childElementCount; i++) {
+            if (goalList.childNodes[i].textContent === goalInput){
+                exists = true;
+            } 
+        }
+        if (exists){
+            alert("⚠️Goal already exists!⚠️");
+        } else {
+            const newGoal = document.createElement('li');
+            newGoal.textContent = goalInput;
+            goalList.appendChild(newGoal);
+        }
     } else {
     //First entry
     const newGoal = document.createElement('li');
